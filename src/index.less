@@ -1,0 +1,99 @@
+.scroll-container {
+    padding: 10px;
+    min-height: 812px;
+    max-height: 812px;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    overflow-wrap: break-word;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.drawer-open-tran {
+    transform: translateX(10%);
+}
+
+.common-table {
+    background-color: #fff !important;
+
+    .ant-table-tbody>tr {
+        transition: all 0s;
+
+        &:hover {
+            transition: all 0s;
+            background-color: #e6fffb !important;
+        }
+    }
+
+    .ant-table-tbody>tr>td {
+        color: #333333;
+        transition: all 0s;
+        background-color: inherit !important;
+    }
+
+    .selceted-tr {
+        background-color: #b5f5ec !important;
+    }
+
+    .odd-tr {
+        background-color: #ffadd2 !important;
+    }
+
+    .even-tr {
+        background-color: #ffd591 !important;
+    }
+
+    .ant-table-title {
+        button {
+            margin-right: 10px;
+        }
+    }
+
+    .ant-table-thead {
+        background-color: #f8f8f9 !important;
+
+        tr>th {
+            background-color: initial !important;
+        }
+    }
+}
+
+.activeTab {
+    height: 40px;
+    color: #1890ff !important;
+    background: #fff !important;
+    border-color: #e8e8e8 !important;
+    border-bottom: 1px solid #fff !important;
+}
+
+.normalTab {
+    height: 40px;
+    margin: 0;
+    margin-right: 2px;
+    line-height: 38px;
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+    border-radius: 4px 4px 0 0;
+    -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    cursor: pointer;
+}
+
+// 主题色小格子
+.theme-box-warp {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    margin: 9px 9px 0px 0px;
+    display: inline-block
+}

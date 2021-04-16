@@ -8,6 +8,7 @@
  */
 import React from 'react'
 import ReactDOM from "react-dom"
+import BaseLayout from './Layouts/BaseLayout'
 import { ConfigProvider } from 'antd';
 import './index.less';
 import zhCN from 'antd/es/locale/zh_CN';

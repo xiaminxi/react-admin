@@ -1,0 +1,75 @@
+{
+    "workbench.editor.tabSizing": "shrink",
+    // 启用启用或禁用 JavaScript 格式化程序。
+    "javascript.format.enable": true,
+    // 启用或禁用默认 HTML 格式化程序。
+    "html.format.enable": true,
+    // 启用或禁用默认 JSON 格式化程序。
+    "json.format.enable": true,
+    // 代码查看引用是否开启
+    "javascript.referencesCodeLens.enabled": true,
+    // vetur:对html的内容使用js-beautify-html
+    // "vetur.format.defaultFormatter.html": "js-beautify-html",
+    // 编辑器是否启用代码引用查看
+    "editor.codeLens": false,
+    //文件头部注释模板，注意该模板不可提交
+    "fileheader.customMade": {
+        "Author": "xiaminxi",
+        "Date": "Do not edit",
+        "LastEditors": "xiaminxi",
+        "LastEditTime": "Do not edit",
+        "Description": "请输入文件说明",
+    },
+    // 编辑器字体大小
+    "editor.fontSize": 12,
+    // 是否启用git自动拉取
+    "git.autofetch": false,
+    // 文件修改后1000后自动保存，单位毫秒
+    "files.autoSaveDelay": 1000,
+    // 编辑器的tabSize为4
+    "editor.tabSize": 4,
+    // beautify的tabsize为4
+    "beautify.tabSize": 4,
+    // 文件打开时，自动检测tabSize
+    "editor.detectIndentation": false,
+    "files.autoSave": "off",
+    
+    // 其中快捷键
+    // 格式化文件                       shift + alt + f
+    // 向上复制行                       shift + alt + up
+    // 选中全相同                       shift + alt + l
+    // 选取下一个                       ctr + d
+    // 当前行上移                       alt + up
+    // 复制当前行                       ctr + c
+    // 剪切当前行                       ctr + x
+    // 文件内查找                       ctr + f
+    // 切换项目                         ctr + r
+    // "vetur.format.defaultFormatterOptions": {
+    //     "js-beautify-html": {
+    //         "wrap_attributes": "force-expand-multiline"
+    //     },
+    //     "prettyhtml": {
+    //         "printWidth": 400,
+    //         "singleQuote": false,
+    //         "wrapAttributes": false,
+    //         "sortAttributes": true,
+    //     },
+    // },
+    // "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "vetur.format.defaultFormatter.js": "vscode-typescript",
+    "vetur.format.defaultFormatterOptions": {
+        "js-beautify-html": {
+            "wrap_attributes": "auto"
+        },
+        "prettyhtml": {
+            "printWidth": 400,
+            "singleQuote": false,
+            "wrapAttributes": false,
+            "sortAttributes": true
+        }
+    },
+    "editor.wordWrap": "on",
+    "html.format.wrapAttributes": "aligned-multiple",
+    "compile-hero.disable-compile-files-on-did-save-code": true,
+    
+}
