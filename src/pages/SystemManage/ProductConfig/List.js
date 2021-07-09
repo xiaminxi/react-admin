@@ -2,14 +2,18 @@
  * @Author: xiaminxi
  * @Date: 2020-08-05 21:40:42
  * @LastEditors: xiaminxi
- * @LastEditTime: 2021-03-23 17:34:52
+ * @LastEditTime: 2021-06-15 15:29:40
  * @Description: 请输入文件说明
  * @FilePath: \xiaminxi.github.io\src\pages\SystemManage\ProductConfig\List.js
  */
 import React, { Component } from 'react'
-import { Form, Input } from 'antd'
+import { Form, Input, Modal } from 'antd'
 import { getMenuList } from '../../../server/api'
 import CommonPage from '../../Component/CommonPage'
+import PropTypes from 'prop-types'
+import { Prompt } from 'react-router'
+
+// import PreventPrompt from '../../../components/preventPrompt'
 
 export default class List extends Component {
     constructor(props) {
@@ -30,6 +34,48 @@ export default class List extends Component {
             return (curr) => {
                 clearTimeout(timer)
                 timer = setTimeout(cb, times, curr.target.value);
+            }
+        }
+
+        class PreventPrompt extends Component {
+            constructor(props) {
+                super(props)
+                console.log(props)
+                this.state = {
+                     
+                }
+            }
+            
+            static propTypes = {
+                done: PropTypes.bool.isRequired
+            }
+        
+            handleMessage = (location) => {
+                const { done } = this.props
+                if(!done){
+                    Modal.confirm({
+                        title: '当前页面操作未保存， 是否离开?',
+                        // content: 'Some descriptions',
+                        okText: '确定',
+                        okType: 'danger',
+                        cancelText: '取消',
+        
+                        onOk: () => {
+                            // this.props.history.push(location.pathname)
+                        },
+                        onCancel() {
+                            return false
+                        },
+                    })
+                }else{
+                    return true
+                }
+            }
+        
+            render() {
+                return (
+                    <Prompt message={this.handleMessage}/>
+                )
             }
         }
 
@@ -87,7 +133,9 @@ export default class List extends Component {
         }
 
         return (
-            <CommonPage {...pageProps} />
+          <div>
+                <CommonPage {...pageProps} />
+          </div>
         )
     }
 }

@@ -2,7 +2,7 @@
  * @Author: xiaminxi
  * @Date: 2020-08-05 20:53:27
  * @LastEditors: xiaminxi
- * @LastEditTime: 2021-04-15 19:37:09
+ * @LastEditTime: 2021-06-11 17:57:06
  * @Description: 页面布局文件
  */
 import React, { Component } from 'react'
@@ -139,7 +139,7 @@ export default class BaseLayout extends Component {
                                 tabpaneList.map(item => (
                                     <TabPane closable={item.key !== "/"} tab={this.renderTabBar(item)} key={item.key} >
                                         <Spin indicator={<LoadingOutlined style={{ fontSize: 26 }} spin />} spinning={!isReload} tip="页面加载中...">
-                                            {isReload ? <Route render={props => <item.component {...props} />} /> : <div style={{ height: 300 }} ></div>}
+                                        {isReload ? <Route render={props => <item.component {...props} />} /> : <div style={{ height: 300 }} ></div>}
                                         </Spin>
                                     </TabPane>
                                 ))
